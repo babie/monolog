@@ -5,6 +5,10 @@ export default function Home() {
     <div className="container">
       <Head>
         <title>babie.dev</title>
+        <meta
+          name="description"
+          content="ソフトウェア・エンジニアbabieの個人ウェブサイトです。"
+        />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
