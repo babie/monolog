@@ -30,7 +30,7 @@ export default function Home() {
       <main>
         <h1 className="title">Welcome to babie.dev!</h1>
 
-        <p className="description">This is a babie&apos;s personal website.</p>
+        <p className="description">babieの個人サイトです。</p>
 
         <div className="grid">
           <a
@@ -40,7 +40,7 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <h3>Twitter &rarr;</h3>
-            <p>I&apos;m talking silly everyday.</p>
+            <p>毎日くだらないことを呟いている。</p>
           </a>
 
           <a
@@ -50,7 +50,7 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <h3>Github &rarr;</h3>
-            <p>I code sometimes.</p>
+            <p>たまにコードを書く。</p>
           </a>
         </div>
       </main>
