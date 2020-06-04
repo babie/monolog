@@ -31,8 +31,6 @@ export default function Home() {
             </a>
           </div>
         </main>
-
-        <footer>©︎️ 2020 babie</footer>
       </Layout>
 
       <style jsx>{`

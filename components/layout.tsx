@@ -80,6 +80,22 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
       {children}
 
+      <nav>
+        <ul>
+          <li>Refresh</li>
+        </ul>
+      </nav>
+
+      <footer>©︎️ 2020 babie</footer>
+
+      <style jsx>{`
+        nav ul {
+          padding: 0;
+          margin: 0;
+          list-style-type: none;
+        }
+      `}</style>
+
       <style jsx global>{`
         html,
         body {
