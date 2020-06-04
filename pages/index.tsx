@@ -9,6 +9,7 @@ export default function Home() {
           name="description"
           content="ソフトウェア・エンジニアbabieの個人ウェブサイトです。"
         />
+        <link rel="canonical" href="https://babie.dev/" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
