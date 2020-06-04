@@ -1,66 +1,39 @@
-import Head from 'next/head'
+import Layout from '../components/layout'
 
 export default function Home() {
   return (
     <div className="container">
-      <Head>
-        <title>babie.dev</title>
-        <meta
-          name="description"
-          content="ソフトウェア・エンジニアbabieの個人ウェブサイトです。"
-        />
-        <link rel="canonical" href="https://babie.dev/" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="msapplication-TileColor" content="#ffc40d" />
-        <meta name="theme-color" content="#ffffff" />
-      </Head>
+      <Layout>
+        <main>
+          <h1 className="title">Welcome to babie.dev!</h1>
 
-      <main>
-        <h1 className="title">Welcome to babie.dev!</h1>
+          <p className="description">babieの個人サイトです。</p>
 
-        <p className="description">babieの個人サイトです。</p>
+          <div className="grid">
+            <a
+              href="https://twitter.com/babie"
+              className="card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h3>Twitter &rarr;</h3>
+              <p>毎日くだらないことを呟いている。</p>
+            </a>
 
-        <div className="grid">
-          <a
-            href="https://twitter.com/babie"
-            className="card"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h3>Twitter &rarr;</h3>
-            <p>毎日くだらないことを呟いている。</p>
-          </a>
+            <a
+              href="https://github.com/babie"
+              className="card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h3>Github &rarr;</h3>
+              <p>たまにコードを書く。</p>
+            </a>
+          </div>
+        </main>
 
-          <a
-            href="https://github.com/babie"
-            className="card"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h3>Github &rarr;</h3>
-            <p>たまにコードを書く。</p>
-          </a>
-        </div>
-      </main>
-
-      <footer>©︎️ 2020 babie</footer>
+        <footer>©︎️ 2020 babie</footer>
+      </Layout>
 
       <style jsx>{`
         .container {
@@ -190,21 +163,6 @@ export default function Home() {
             width: 100%;
             flex-direction: column;
           }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
         }
       `}</style>
     </div>
