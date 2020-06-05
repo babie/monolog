@@ -11,6 +11,7 @@
   },
   "rules": {
     "no-console":"off",
+    "spaced-comment": ["error", "always", { "markers": ["/"] }],
     "prettier/prettier": "error",
     "react/react-in-jsx-scope": "off"
   }
