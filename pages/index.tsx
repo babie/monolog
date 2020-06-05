@@ -5,7 +5,7 @@ export default function Home() {
     <div className="container">
       <Layout>
         <main>
-          <h1 className="title">Welcome to babie.dev!</h1>
+          <h1 className="title">babie.dev</h1>
 
           <p className="description">babieの個人サイトです。</p>
 
