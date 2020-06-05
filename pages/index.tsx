@@ -16,7 +16,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h3>Twitter &rarr;</h3>
+              <h2>Twitter &rarr;</h2>
               <p>毎日くだらないことを呟いている。</p>
             </a>
 
@@ -26,7 +26,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h3>Github &rarr;</h3>
+              <h2>Github &rarr;</h2>
               <p>たまにコードを書く。</p>
             </a>
           </div>
@@ -141,7 +141,7 @@ export default function Home() {
           border-color: #0070f3;
         }
 
-        .card h3 {
+        .card h2 {
           margin: 0 0 1rem 0;
           font-size: 1.5rem;
         }
