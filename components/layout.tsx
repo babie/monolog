@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import RefreshButton from './refresh-button'
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -82,7 +83,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
       <nav>
         <ul>
-          <li>Refresh</li>
+          <li>
+            <RefreshButton />
+          </li>
         </ul>
       </nav>
 
