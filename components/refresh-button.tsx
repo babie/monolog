@@ -13,6 +13,7 @@ const refresh = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
       }
     })
   }
+  console.log('refresh button pushed.')
 }
 
 const RefreshButton = () => {
