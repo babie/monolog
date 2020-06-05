@@ -4,6 +4,11 @@ const refresh = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
   if (typeof window !== 'undefined' && 'workbox' in window) {
     window.workbox.addEventlistener('installed', (e) => {
       if (e.isUpdate) {
+        if (typeof navigator !== 'undefined' && 'serviceWorker' in navigator) {
+          navigator.serviceWorker.getRegistration().then((registration) => {
+            registration.unregister()
+          })
+        }
         window.location.reload()
       }
     })
