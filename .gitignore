@@ -32,3 +32,6 @@ yarn-error.log*
 # service worker
 /public/sw.js*
 /public/workbox-*
+
+# stylelint
+.stylelintcache

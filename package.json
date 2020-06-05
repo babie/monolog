@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./"
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./",
+    "style": "stylelint --cache --syntax css-in-js './**/*.{js,jsx,ts,tsx}'"
   },
   "dependencies": {
     "next": "9.4.4",
@@ -27,6 +28,10 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
     "prettier": "^2.0.5",
+    "stylelint": "^13.6.0",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-prettier": "^1.1.2",
     "typescript": "^3.9.3"
   }
 }
