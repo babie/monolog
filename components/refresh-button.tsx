@@ -2,7 +2,7 @@ const refresh = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
   event.preventDefault()
   event.stopPropagation()
   if (typeof window !== 'undefined' && 'workbox' in window) {
-    window.workbox.addEventlistener('installed', (e) => {
+    window.workbox.addEventListener('installed', (e) => {
       if (e.isUpdate) {
         if (typeof navigator !== 'undefined' && 'serviceWorker' in navigator) {
           navigator.serviceWorker.getRegistration().then((registration) => {
