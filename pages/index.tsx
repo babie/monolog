@@ -1,37 +1,33 @@
-import { Layout } from '../components/layout'
-
 export default function Home() {
   return (
     <div className="container">
-      <Layout>
-        <main>
-          <h1 className="title">babie.dev</h1>
+      <main>
+        <h1 className="title">babie.dev</h1>
 
-          <p className="description">babieの個人サイトです。</p>
+        <p className="description">babieの個人サイトです。</p>
 
-          <div className="grid">
-            <a
-              href="https://twitter.com/babie"
-              className="card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h2>Twitter &rarr;</h2>
-              <p>毎日くだらないことを呟いている。</p>
-            </a>
+        <div className="grid">
+          <a
+            href="https://twitter.com/babie"
+            className="card"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h2>Twitter &rarr;</h2>
+            <p>毎日くだらないことを呟いている。</p>
+          </a>
 
-            <a
-              href="https://github.com/babie"
-              className="card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h2>Github &rarr;</h2>
-              <p>たまにコードを書く。</p>
-            </a>
-          </div>
-        </main>
-      </Layout>
+          <a
+            href="https://github.com/babie"
+            className="card"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h2>Github &rarr;</h2>
+            <p>たまにコードを書く。</p>
+          </a>
+        </div>
+      </main>
 
       <style jsx>{`
         .container {

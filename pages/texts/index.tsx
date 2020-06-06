@@ -8,11 +8,9 @@ const Index = ({ textSummaries }: Props) => {
     <li key={`textSummary-${textSummary}`}>{textSummary.title}</li>
   ))
   return (
-    <Layout>
-      <main>
-        <ul>{lists}</ul>
-      </main>
-    </Layout>
+    <main>
+      <ul>{lists}</ul>
+    </main>
   )
 }
 
