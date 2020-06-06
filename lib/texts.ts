@@ -1,5 +1,5 @@
-export type PostIds = { params: { id: string } }[]
-export const getAllPostIds = (): PostIds => {
+export type TextIds = { params: { id: string } }[]
+export const getAllTextIds = (): TextIds => {
   return [
     {
       params: {
@@ -9,13 +9,13 @@ export const getAllPostIds = (): PostIds => {
   ]
 }
 
-export type PostData = {
+export type TextData = {
   id: string
   date: string
   title: string
   body: string
 }
-export const getPostData = (id: string): PostData => {
+export const getTextData = (id: string): TextData => {
   const res = {
     date: '2020-06-07',
     title: 'First Post',

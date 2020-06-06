@@ -1,8 +1,8 @@
 import type { GetStaticPaths, GetStaticProps } from 'next'
 import { Layout } from '../../components/layout'
-import { getAllPostIds, getPostData, PostData, PostIds } from '../../lib/blog'
+import { getAllTextIds, getTextData, TextData, TextIds } from '../../lib/texts'
 
-type Props = { postData: PostData }
+type Props = { postData: TextData }
 const Post = ({ postData }: Props) => {
   return (
     <Layout>
@@ -16,7 +16,7 @@ const Post = ({ postData }: Props) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths: PostIds = getAllPostIds()
+  const paths: TextIds = getAllTextIds()
 
   return {
     paths,
@@ -26,7 +26,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { id } = context.params
-  const postData: PostData = getPostData(id as string)
+  const postData: TextData = getTextData(id as string)
 
   return {
     props: {
