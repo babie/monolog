@@ -27,3 +27,13 @@ export const getTextData = (id: string): TextData => {
     ...res,
   }
 }
+
+export type TextSummary = {
+  id: string
+  date: string
+  title: string
+}
+export const getTextSummaries = (): TextSummary[] => {
+  const text = getTextData('first-post')
+  return [text]
+}
