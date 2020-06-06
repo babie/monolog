@@ -10,6 +10,7 @@
     "style": "stylelint --cache --syntax css-in-js './**/*.{js,jsx,ts,tsx}'"
   },
   "dependencies": {
+    "cssremedy": "^0.1.0-beta.2",
     "next": "9.4.4",
     "next-pwa": "^2.5.0",
     "react": "16.13.1",
