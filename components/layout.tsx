@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import RefreshButton from './refresh-button'
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+export const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Head>
@@ -116,5 +116,3 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     </>
   )
 }
-
-export default Layout

@@ -1,5 +1,5 @@
 import type { GetStaticPaths, GetStaticProps } from 'next'
-import Layout from '../../components/layout'
+import { Layout } from '../../components/layout'
 import { getAllPostIds, getPostData, PostData, PostIds } from '../../lib/blog'
 
 type Props = { postData: PostData }
