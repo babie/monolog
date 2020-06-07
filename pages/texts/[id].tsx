@@ -2,7 +2,7 @@ import type { GetStaticPaths, GetStaticProps } from 'next'
 import { getAllTextIds, getTextData, TextData, TextIds } from '../../lib/texts'
 
 type Props = { textData: TextData }
-const Post = ({ textData }: Props) => {
+const TextShow = ({ textData }: Props) => {
   return (
     <article>
       <h1>{textData.title}</h1>
@@ -32,4 +32,4 @@ export const getStaticProps: GetStaticProps = async (context) => {
   }
 }
 
-export default Post
+export default TextShow

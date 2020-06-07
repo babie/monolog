@@ -1,9 +1,8 @@
 import { GetStaticProps } from 'next'
 import { getTextSummaries, TextSummary } from '../../lib/texts'
-import { Layout } from '../../components/layout'
 
 type Props = { textSummaries: TextSummary[] }
-const Index = ({ textSummaries }: Props) => {
+const TextIndex = ({ textSummaries }: Props) => {
   const lists = textSummaries.map((textSummary) => (
     <li key={`textSummary-${textSummary}`}>{textSummary.title}</li>
   ))
@@ -23,4 +22,4 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-export default Index
+export default TextIndex
