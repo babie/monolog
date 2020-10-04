@@ -1,8 +1,10 @@
-import type React from 'react'
 import Head from 'next/head'
 import RefreshButton from './refresh-button'
 
-export const Layout = ({ children }: { children: React.ReactNode }) => {
+type Props = {
+  children: React.ReactNode
+}
+export const Layout: React.FC<Props> = ({ children }: Props) => {
   return (
     <>
       <Head>

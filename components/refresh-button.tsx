@@ -5,9 +5,16 @@ const refresh = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     window.workbox.addEventListener('installed', (e) => {
       if (e.isUpdate) {
         if (typeof navigator !== 'undefined' && 'serviceWorker' in navigator) {
-          navigator.serviceWorker.getRegistration().then((registration) => {
-            registration.unregister()
-          })
+          navigator.serviceWorker
+            .getRegistration()
+            .then((registration) => {
+              registration.unregister().catch((reason) => {
+                console.log(reason)
+              })
+            })
+            .catch((reason) => {
+              console.log(reason)
+            })
         }
         window.location.reload()
       }
@@ -16,7 +23,7 @@ const refresh = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
   console.log('refresh button pushed.')
 }
 
-const RefreshButton = () => {
+const RefreshButton: React.FC = () => {
   return (
     <button type="button" onClick={refresh}>
       Refresh

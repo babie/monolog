@@ -1,19 +1,26 @@
 {
+  "env": { "browser": true },
   "extends": [
     "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:react/recommended",
     "prettier",
     "prettier/@typescript-eslint",
     "prettier/react"
   ],
-  "plugins": ["prettier"],
+  "plugins": [
+    "prettier"
+  ],
   "parserOptions": {
     "project": "./tsconfig.json"
   },
   "rules": {
     "no-console":"off",
+    "react/react-in-jsx-scope": "off",
     "spaced-comment": ["error", "always", { "markers": ["/"] }],
     "import/prefer-default-export": "off",
-    "prettier/prettier": "error",
-    "react/react-in-jsx-scope": "off"
+    "prettier/prettier": "error"
   }
 }
