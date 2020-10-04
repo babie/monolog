@@ -12,9 +12,7 @@ class MyDocument extends Document {
       <Html lang="ja">
         <Head />
         <body>
-          <Layout>
-            <Main />
-          </Layout>
+          <Main />
           <NextScript />
         </body>
       </Html>
