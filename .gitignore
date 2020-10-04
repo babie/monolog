@@ -35,3 +35,6 @@ yarn-error.log*
 
 # stylelint
 .stylelintcache
+
+# lighthouse
+/*.report.html
