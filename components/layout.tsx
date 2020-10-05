@@ -1,10 +1,27 @@
 import Head from 'next/head'
+import { Landscape } from './landscape'
+import { Portrait } from './portrait'
 import RefreshButton from './refresh-button'
+import { useOrientationChange } from '../lib/use-orientation-change'
+
+const switchLayout = (orientation: string): React.FC => {
+  switch (orientation) {
+    case 'portrait':
+      return Portrait
+    case 'landscape':
+      return Landscape
+    default:
+      return Portrait
+  }
+}
 
 type Props = {
   children: React.ReactNode
 }
 export const Layout: React.FC<Props> = ({ children }: Props) => {
+  const orientation = useOrientationChange()
+  const NowLayout = switchLayout(orientation)
+
   return (
     <>
       <Head>
@@ -82,20 +99,18 @@ export const Layout: React.FC<Props> = ({ children }: Props) => {
         />
       </Head>
 
-      {children}
+      <NowLayout>{children}</NowLayout>
 
-      <nav>
-        <ul>
-          <li>
-            <RefreshButton />
-          </li>
-        </ul>
-      </nav>
+      <ul>
+        <li>
+          <RefreshButton />
+        </li>
+      </ul>
 
       <footer>©︎️ 2020 babie</footer>
 
       <style jsx>{`
-        nav ul {
+        ul {
           padding: 0;
           margin: 0;
           list-style-type: none;

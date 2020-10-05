@@ -4,45 +4,34 @@ const Home: React.FC = () => {
   return (
     <Layout>
       <div className="container">
-        <main>
-          <h1 className="title">babie.dev</h1>
+        <h1 className="title">babie.dev</h1>
 
-          <p className="description">babieの個人サイトです。</p>
+        <p className="description">babieの個人サイトです。</p>
 
-          <div className="grid">
-            <a
-              href="https://twitter.com/babie"
-              className="card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h2>Twitter &rarr;</h2>
-              <p>毎日くだらないことを呟いている。</p>
-            </a>
+        <div className="grid">
+          <a
+            href="https://twitter.com/babie"
+            className="card"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h2>Twitter &rarr;</h2>
+            <p>毎日くだらないことを呟いている。</p>
+          </a>
 
-            <a
-              href="https://github.com/babie"
-              className="card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h2>Github &rarr;</h2>
-              <p>たまにコードを書く。</p>
-            </a>
-          </div>
-        </main>
+          <a
+            href="https://github.com/babie"
+            className="card"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h2>Github &rarr;</h2>
+            <p>たまにコードを書く。</p>
+          </a>
+        </div>
 
         <style jsx>{`
           .container {
-            min-height: 100vh;
-            padding: 0 0.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-          }
-
-          main {
             padding: 5rem 0;
             flex: 1;
             display: flex;
