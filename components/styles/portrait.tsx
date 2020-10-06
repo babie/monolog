@@ -1,7 +1,4 @@
-type Props = {
-  children: React.ReactNode
-}
-export const PortraitStyle: React.FC<Props> = ({ children }: Props) => {
+export const PortraitStyle: React.FC = () => {
   return (
     <>
       <style jsx>{`

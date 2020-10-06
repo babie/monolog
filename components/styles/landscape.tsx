@@ -1,7 +1,4 @@
-type Props = {
-  children: React.ReactNode
-}
-export const LandscapeStyle: React.FC<Props> = ({ children }: Props) => {
+export const LandscapeStyle: React.FC = () => {
   return (
     <>
       <style jsx>{`
