@@ -98,9 +98,7 @@ export const Layout: React.FC<Props> = ({ children }: Props) => {
           content="https://babie.dev/images/icons/apple-touch-icon.png"
         />
       </Head>
-
       <NowLayout>{children}</NowLayout>
-
       <ul>
         <li>
           <RefreshButton />

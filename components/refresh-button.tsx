@@ -1,7 +1,7 @@
 const refresh = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
   event.preventDefault()
   event.stopPropagation()
-  if (typeof window !== 'undefined' && 'workbox' in window) {
+  if (process.browser && 'workbox' in window) {
     window.workbox.addEventListener('installed', (e) => {
       if (e.isUpdate) {
         if (typeof navigator !== 'undefined' && 'serviceWorker' in navigator) {
@@ -15,10 +15,16 @@ const refresh = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
             .catch((reason) => {
               console.log(reason)
             })
+        } else {
+          console.log('no dom.')
         }
         window.location.reload()
+      } else {
+        console.log('no update.')
       }
     })
+  } else {
+    console.log('no browser or no window.workbox')
   }
   console.log('refresh button pushed.')
 }

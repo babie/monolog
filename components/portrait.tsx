@@ -14,14 +14,12 @@ export const Portrait: React.FC<Props> = ({ children }: Props) => {
         </ul>
       </nav>
       <main>{children}</main>
-      <div>
-        <ul>
-          <li>User</li>
-          <li>New</li>
-          <li>Edit</li>
-          <li>Remove</li>
-        </ul>
-      </div>
+      <ul>
+        <li>User</li>
+        <li>New</li>
+        <li>Edit</li>
+        <li>Remove</li>
+      </ul>
       <style jsx>{`
         main {
           min-height: 100vh;
