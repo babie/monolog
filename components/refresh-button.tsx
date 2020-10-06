@@ -29,12 +29,10 @@ const refresh = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
   console.log('refresh button pushed.')
 }
 
-const RefreshButton: React.FC = () => {
+export const RefreshButton: React.FC = () => {
   return (
     <button type="button" onClick={refresh}>
       Refresh
     </button>
   )
 }
-
-export default RefreshButton

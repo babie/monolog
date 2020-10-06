@@ -1,17 +1,15 @@
-import Head from 'next/head'
-import { Landscape } from './landscape'
-import { Portrait } from './portrait'
-import RefreshButton from './refresh-button'
+import { PortraitStyle, LandscapeStyle } from './styles'
+import { RefreshButton } from './refresh-button'
 import { useOrientationChange } from '../lib/use-orientation-change'
 
-const switchLayout = (orientation: string): React.FC => {
+const switchStyle = (orientation: string): React.FC => {
   switch (orientation) {
     case 'portrait':
-      return Portrait
+      return PortraitStyle
     case 'landscape':
-      return Landscape
+      return LandscapeStyle
     default:
-      return Portrait
+      return PortraitStyle
   }
 }
 
@@ -20,93 +18,26 @@ type Props = {
 }
 export const Layout: React.FC<Props> = ({ children }: Props) => {
   const orientation = useOrientationChange()
-  const NowLayout = switchLayout(orientation)
+  const Style = switchStyle(orientation)
 
   return (
     <>
-      <Head>
-        <title>babie.dev</title>
-        <link rel="canonical" href="https://babie.dev/" />
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width, viewport-fit=cover"
-        />
-        <meta name="application-name" content="babie.dev" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="babie.dev" />
-        <meta
-          name="description"
-          content="ソフトウェア・エンジニアであるbabieのウェブサイトです。"
-        />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="msapplication-config" content="/browserconfig.xml" />
-        <meta name="msapplication-TileColor" content="#ffc40d" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <meta name="theme-color" content="#ffc40d" />
-
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/images/icons/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/images/icons/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/images/icons/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/manifest.json" />
-        {/*
-        <link
-          rel="mask-icon"
-          href="/static/icons/safari-pinned-tab.svg"
-          color="#5bbad5"
-        />
-        */}
-        <link rel="shortcut icon" href="/images/icons/favicon.ico" />
-
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:url" content="https://babie.dev" />
-        <meta name="twitter:title" content="babie.dev" />
-        <meta
-          name="twitter:description"
-          content="ソフトウェア・エンジニアであるbabieのウェブサイトです。"
-        />
-        <meta
-          name="twitter:image"
-          content="https://babie.dev/images/icons/android-chrome-192x192.png"
-        />
-        <meta name="twitter:creator" content="@babie" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="babie.dev" />
-        <meta
-          property="og:description"
-          content="ソフトウェア・エンジニアであるbabieのウェブサイトです。"
-        />
-        <meta property="og:site_name" content="babie.dev" />
-        <meta property="og:url" content="https://babie.dev" />
-        <meta
-          property="og:image"
-          content="https://babie.dev/images/icons/apple-touch-icon.png"
-        />
-      </Head>
-      <NowLayout>{children}</NowLayout>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Index</li>
+          <li>Search</li>
+          <li>Author</li>
+        </ul>
+      </nav>
+      {children}
       <ul>
         <li>
           <RefreshButton />
         </li>
       </ul>
-
       <footer>©︎️ 2020 babie</footer>
-
+      <Style />
       <style jsx>{`
         ul {
           padding: 0;

@@ -1,12 +1,16 @@
-import { Layout } from '../components/layout'
+import { Head, Layout } from '../components'
 
 const Home: React.FC = () => {
+  const title = 'monolog'
+  const description = "babie's web site and `pieces` demo site."
+
   return (
     <Layout>
+      <Head title={title} description={description} />
       <div className="container">
-        <h1 className="title">babie.dev</h1>
+        <h1 className="title">{title}</h1>
 
-        <p className="description">babieの個人サイトです。</p>
+        <p className="description">{description}</p>
 
         <div className="grid">
           <a
@@ -133,6 +137,12 @@ const Home: React.FC = () => {
           }
         `}</style>
       </div>
+      <ul className="toolbar">
+        <li>User</li>
+        <li>New</li>
+        <li>Edit</li>
+        <li>Remove</li>
+      </ul>
     </Layout>
   )
 }
