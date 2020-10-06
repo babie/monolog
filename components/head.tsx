@@ -1,21 +1,23 @@
 import NextHead from 'next/head'
+import { useUrlChange } from '../lib/use-url-change'
 
 type Props = {
   title: string
   description: string
 }
 export const Head: React.FC<Props> = ({ title, description }: Props) => {
-  const sitename = 'pieces'
+  const siteName = 'pieces'
+  const url = useUrlChange()
 
   return (
     <NextHead>
       <title>{title}</title>
-      <link rel="canonical" href="https://babie.dev/" />
+      <link rel="canonical" href={url} />
       <meta
         name="viewport"
         content="minimum-scale=1, initial-scale=1, width=device-width, viewport-fit=cover"
       />
-      <meta name="application-name" content={sitename} />
+      <meta name="application-name" content={siteName} />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content={title} />
@@ -55,7 +57,7 @@ export const Head: React.FC<Props> = ({ title, description }: Props) => {
       <link rel="shortcut icon" href="/images/icons/favicon.ico" />
 
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:url" content="https://babie.dev" />
+      <meta name="twitter:url" content={url} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta
@@ -66,8 +68,8 @@ export const Head: React.FC<Props> = ({ title, description }: Props) => {
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:site_name" content={sitename} />
-      <meta property="og:url" content="https://babie.dev" />
+      <meta property="og:site_name" content={siteName} />
+      <meta property="og:url" content={url} />
       <meta
         property="og:image"
         content="https://babie.dev/images/icons/apple-touch-icon.png"
